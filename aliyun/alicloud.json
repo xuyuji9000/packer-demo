@@ -11,7 +11,6 @@
 
         "image_name": "packer_basic",
         "source_image": "ubuntu_16_0402_64_20G_alibase_20170818.vhd",
-        "instance_type": "t2.micro",
         "io_optimized": "true",
 
         "ssh_username": "root",

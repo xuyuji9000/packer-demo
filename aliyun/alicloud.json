@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "access_key": "",
+        "secret_key": ""
+    },
+    "builders": [{
+        "type": "alicloud-ecs",
+        "access_key": "{{user `access_key`}}",
+        "secret_key": "{{user `secret_key`}}",
+        "region": "cn-shanghai",
+
+        "image_name": "packer_basic",
+        "source_image": "ubuntu_16_0402_64_20G_alibase_20170818.vhd",
+        "instance_type": "t2.micro",
+        "io_optimized": "true",
+
+        "ssh_username": "root",
+        "instance_type": "ecs.xn4.small",
+        "internet_charge_type": "PayByTraffic"
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "sleep 30",
+            "apt update"
+        ]
+    }]
+}
